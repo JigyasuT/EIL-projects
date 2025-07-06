@@ -54,7 +54,7 @@ const multer = require("multer");
 // app.use(cors({
 //   origin: "http://localhost:8080", // Frontend origin
 //   credentials: true
-}));
+// }));
 app.use(cors({
   origin: ["https://eil-projects-kws7.vercel.app", "http://localhost:8080"], // ✅ Allow both production and local frontend
   credentials: true
