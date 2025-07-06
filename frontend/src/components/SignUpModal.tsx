@@ -93,7 +93,7 @@ const SignUpModal = ({
         submissionData.append("academicDocument", documents[0]);
       }
 
-      const response = await axios.post("deploy-eil-project-apis.vercel.app/auth/signup", submissionData, {
+      const response = await axios.post("https://eil-projects.vercel.app/auth/signup", submissionData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
