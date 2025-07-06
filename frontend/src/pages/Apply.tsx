@@ -469,7 +469,7 @@ const submitApplication = async () => {
 
 
     // Submit to backend
-    await axios.post("deploy-eil-project-apis.vercel.app/application", formPayload, {
+    await axios.post("https://eil-projects.vercel.app/application", formPayload, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
