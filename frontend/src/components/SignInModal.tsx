@@ -44,7 +44,7 @@ const SignInModal = ({
     setIsLoading(true);
 
     try {
-      const response = await axios.post("deploy-eil-project-apis.vercel.app/auth/login", formData);
+      const response = await axios.post("https://eil-projects.vercel.app/auth/login", formData);
       
       console.log("Login success:", response.data);
 
