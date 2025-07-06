@@ -54,31 +54,31 @@ const multer = require("multer");
 // app.use(cors({
 //   origin: "http://localhost:8080", // Frontend origin
 //   credentials: true
-// }));
-// app.use(cors({
-//   origin: ["https://eil-projects-kws7.vercel.app", "http://localhost:8080"], // ✅ Allow both production and local frontend
-//   credentials: true
-// }));
-
-
-
-// ✅ Correct CORS setup
-const allowedOrigins = [
-  "http://localhost:8080",                  // Local dev
-  "http://localhost:3000",                  // Local dev alternative
-  "https://eil-projects-kws7.vercel.app"    // ✅ Your deployed frontend on Vercel
-];
-
+}));
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
+  origin: ["https://eil-projects-kws7.vercel.app", "http://localhost:8080"], // ✅ Allow both production and local frontend
   credentials: true
 }));
+
+
+
+// // ✅ Correct CORS setup
+// const allowedOrigins = [
+//   "http://localhost:8080",                  // Local dev
+//   "http://localhost:3000",                  // Local dev alternative
+//   "https://eil-projects-kws7.vercel.app"    // ✅ Your deployed frontend on Vercel
+// ];
+
+// app.use(cors({
+//   origin: function (origin, callback) {
+//     if (!origin || allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error("Not allowed by CORS"));
+//     }
+//   },
+//   credentials: true
+// }));
 
 
 // Multer setup (memory storage for now, can be changed later)
